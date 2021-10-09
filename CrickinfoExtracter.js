@@ -55,5 +55,7 @@ responseKaPromise.then(function (response) {
 
         matches.push(match);
     }
-    console.log(matches);
+    //console.log(matches);
+    let matchesJSON = JSON.stringify(matches); 
+    fs.writeFileSync("matches.json", matchesJSON, "utf-8");
 })
